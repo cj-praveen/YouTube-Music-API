@@ -53,5 +53,6 @@ import YouTubeMusicAPI as ytm
 
 # Type The Song Name inside the brackets eg: ("Faded Alan Walker")
 
-ytm.getURL("Song Name")
+url=ytm.getURL("Song Name")
+print(url)
 ```
