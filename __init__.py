@@ -17,7 +17,7 @@ def download(song_name, path):
     if "Topic" in song_name.lower():
         pass
     else:
-        song_name = song_name + " Topic"
+        song_name = song_name + "Album Topic"
     PyWhatKitAPI = "https://pywhatkit.herokuapp.com/playonyt?topic=" + song_name
     print("Connecting To Youtube Music...")
     GET_content = requests.get(PyWhatKitAPI)
@@ -32,7 +32,7 @@ def play(song_name):
     if "Topic" in song_name.lower():
         pass
     else:
-        song_name = song_name + " Topic"
+        song_name = song_name + "Album Topic"
     PyWhatKitAPI = "https://pywhatkit.herokuapp.com/playonyt?topic=" + song_name
     print("Connecting To Youtube Music...")
     GET_content = requests.get(PyWhatKitAPI)
@@ -45,9 +45,22 @@ def getURL(song_name):
     if "Topic" in song_name.lower():
         pass
     else:
-        song_name = song_name + " Topic"
+        song_name = song_name + "Album Topic"
     PyWhatKitAPI = "https://pywhatkit.herokuapp.com/playonyt?topic=" + song_name
     GET_content = requests.get(PyWhatKitAPI)
     Music_URL = GET_content.text.replace("www.", "music.")
     print(Music_URL)
     return Music_URL
+
+def playonvlc(song_name):
+    if "Topic" in song_name.lower():
+        pass
+    else:
+        song_name = song_name + "Album Topic"
+    print("Connecting To Youtube Music...")
+    PyWhatKitAPI = "https://pywhatkit.herokuapp.com/playonyt?topic=" + song_name
+    GET_content = requests.get(PyWhatKitAPI)
+    Music_URL = GET_content.text
+    song = pafy.new(GET_content.text)
+    print("\nNow Playing : " + song.title + " | Copyrights (c) " + song.author)
+    os.system("start vlc " + Music_URL)
