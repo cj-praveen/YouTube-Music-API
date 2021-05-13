@@ -50,3 +50,4 @@ def getURL(song_name):
     GET_content = requests.get(PyWhatKitAPI)
     Music_URL = GET_content.text.replace("www.", "music.")
     print(Music_URL)
+    return Music_URL
