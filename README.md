@@ -56,3 +56,14 @@ import YouTubeMusicAPI as ytm
 url=ytm.getURL("Song Name")
 print(url)
 ```
+- For getting the song url, Create the code like this:
+```python
+# import the module
+
+import YouTubeMusicAPI as ytm
+
+# Use .playonvlc for streaming song in VLC Media Player
+
+# Type The Song Name inside the brackets eg: ("Faded Alan Walker")
+
+ytm.playonvlc("Song Name")
