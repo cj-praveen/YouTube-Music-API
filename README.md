@@ -56,7 +56,7 @@ import YouTubeMusicAPI as ytm
 url=ytm.getURL("Song Name")
 print(url)
 ```
-- For getting the song url, Create the code like this:
+- For playing the song in vlc without downloading, Create the code like this:
 ```python
 # import the module
 
