@@ -2,11 +2,10 @@
 
 # YouTube-Music-API
 
-**Features**
-- Get Song Name For User and stream directly in <a href="https://music.youtube.com/">Youtube Music</a> Official website.
-- Get Song Name For User and Download using pafy | youtube_dl
+**How It Works**
+- Get Song Name For User and Redirect to <a href="https://music.youtube.com/">Youtube Music</a> Official website.
 
-**How To Use**
+## How To Use
 
 - For Playing a song, Create the code like this:
 
@@ -21,20 +20,7 @@ import YouTubeMusicAPI as ytm
 
 ytm.play("Song Name")
 ```
-- For downloading the song, Create the code like this:
-
-```python
-# import the module
-
-import YouTubeMusicAPI as ytm
-
-# Use .download for downloading song
-
-# Type The Song Name & download path inside the brackets eg: ("Faded Alan Walker, "C:\Downloads\")
-
-ytm.download("Song Name", "Path")
-```
-- For playing the song in vlc without downloading, Create the code like this:
+- For playing the song in VLC Media Player without downloading, Create the code like this:
 ```python
 # import the module
 
