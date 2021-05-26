@@ -2,13 +2,6 @@
 
 # YouTube-Music-API
 
-<a href="https://pypi.org/project/requests/"><img src="https://img.shields.io/badge/requests-2.25.1-blue" width="120px"></a>
-<a href="https://pypi.org/project/pafy/"><img src="https://img.shields.io/badge/pafy-0.5.5-yellow" width="85px"></a>
-<a href="https://pypi.org/project/youtube_dl/"><img src="https://img.shields.io/badge/youtube_dl-2021.4.26-red" width="155px"></a>
-<a href="https://pypi.org/project/sockets/"><img src="https://img.shields.io/badge/sockets-1.0.0-green" width="110px"></a>
-
-<hr>
-
 **Features**
 - Get Song Name For User and stream directly in <a href="https://music.youtube.com/">Youtube Music</a> Official website.
 - Get Song Name For User and Download using pafy | youtube_dl
