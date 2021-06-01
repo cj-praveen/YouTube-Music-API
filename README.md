@@ -40,6 +40,8 @@ import YouTubeMusicAPI
 YouTubeMusicAPI.playonvlc("Song Name")
 ```
 
+<img src="https://static.wixstatic.com/media/99f884_96c1b045364c4811b381fd1b0d37aada~mv2.gif" width=800px>
+
 <hr>
 
 **MIT License | Copyright (c) 2021 Sijey**
