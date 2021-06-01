@@ -2,8 +2,15 @@
 
 # YouTube-Music-API
 
+**What's new  in version 1.5?**
+
+- Fixed API Stable.
+- Auto-update Feature added.(This feature reduces the developer's time to update.)
+
 **How It Works**
-- Get Song Name For User and Redirect to <a href="https://music.youtube.com/">Youtube Music</a> Official website.
+- Get Song Name from User and Play in <a href="https://music.youtube.com/">Youtube Music</a> Official website.
+
+<hr>
 
 ## How To Use
 
@@ -12,25 +19,34 @@
 ```python
 # import the module
 
-import YouTubeMusicAPI as ytm
+import YouTubeMusicAPI
 
 # Use .play for playing song
 
 # Type The Song Name inside the brackets eg: ("Faded Alan Walker")
 
-ytm.play("Song Name")
+YouTubeMusicAPI.play("Song Name")
 ```
 - For playing the song in VLC Media Player without downloading, Create the code like this:
 ```python
 # import the module
 
-import YouTubeMusicAPI as ytm
+import YouTubeMusicAPI
 
 # Use .playonvlc for streaming song in VLC Media Player
 
 # Type The Song Name inside the brackets eg: ("Faded Alan Walker")
 
-ytm.playonvlc("Song Name")
+YouTubeMusicAPI.playonvlc("Song Name")
 ```
 
-**MIT License, Copyright (c) 2021 Sijey**
+<hr>
+
+**MIT License | Copyright (c) 2021 Sijey**
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software
+```
