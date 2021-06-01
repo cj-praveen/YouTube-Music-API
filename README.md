@@ -4,7 +4,7 @@
 
 **What's new  in version 1.5?**
 
-- Fixed API Stable.
+- Fixed API Issues.
 - Auto-update Feature added.(This feature reduces the developer's time to update.)
 
 **How It Works**
