@@ -2,7 +2,7 @@
 
 # YouTube-Music-API
 
-**What's new  in version 1.5?**
+**What's new  in version 1.6?**
 
 - Stable release.
 - Fixed some errors
