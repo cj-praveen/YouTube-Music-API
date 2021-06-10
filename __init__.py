@@ -31,13 +31,13 @@ def NoInternetConnectionError():
         exit()
 
 def AutoUpdate():
-    if 200 == requests.head("https://pypi.org/project/YouTubeMusicAPI/1.7/").status_code:
+    if 200 == requests.head("https://pypi.org/project/YouTubeMusicAPI/1.8/").status_code:
         if "Windows" == platform.system():
-            os.system("pip install YouTubeMusicAPI==1.7")
+            os.system("pip install YouTubeMusicAPI==1.8")
         elif "Darwin" == platform.system():
-            os.system("pip install YouTubeMusicAPI==1.7")
+            os.system("pip install YouTubeMusicAPI==1.8")
         elif "Linux" == platform.system():
-            os.system("pip install YouTubeMusicAPI==1.7")
+            os.system("pip install YouTubeMusicAPI==1.8")
         
 def __main__(song_name):
     Domain = "https://www.youtube.com/"
@@ -69,6 +69,12 @@ def playonvlc(song_name):
     song_name = f"{song_name} Album Topic"
     Music_URL = __main__(song_name)
     os.system("start vlc " + Music_URL)
+
+def getsonginfo(song_name):
+    song_name = f"{song_name} Album Topic"
+    query = YoutubeSearch(song_name, max_results=1).to_dict()[0]
+    Data = {"Name" : f"{query['title']}", "ID" : f"{query['id']}", "Total Listeners" : f"{str(query['views'].replace(' views', ''))}", "Duration" : f"{query['duration']}", "Artist" : f"{query['channel']}", "URL" : f"https://music.youtube.com/watch?v={query['id']}"}
+    return Data
 
 NoInternetConnectionError()
 AutoUpdate()
