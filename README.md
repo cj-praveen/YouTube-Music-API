@@ -2,13 +2,10 @@
 
 # YouTube-Music-API
 
-**What's new  in version 1.6?**
+**What's new  in version 1.7?**
 
 - Stable release.
-- Fixed some errors
-
-**How It Works**
-- Get Song Name from User and Play in <a href="https://music.youtube.com/">Youtube Music</a> Official website.
+- **Get Song Information** feature added.
 
 <hr>
 
@@ -39,8 +36,21 @@ import YouTubeMusicAPI
 
 YouTubeMusicAPI.playonvlc("Song Name")
 ```
+- To get song information, Create the code like this:
+```python
+# import the module
 
-<img src="https://static.wixstatic.com/media/99f884_96c1b045364c4811b381fd1b0d37aada~mv2.gif" width=800px>
+import YouTubeMusicAPI
+
+# Use .getsonginfo to get song information
+
+# Type The Song Name inside the brackets eg: ("Faded")
+
+YouTubeMusicAPI.getsonginfo("Song Name")
+
+# Output
+{'Name': 'Faded', 'ID': 'd0eUMnJ5kTA', 'Total Listeners': '29,808,990', 'Duration': '3:33', 'Artist': 'Alan Walker', 'URL': 'https://music.youtube.com/watch?v=d0eUMnJ5kTA'}
+```
 
 <hr>
 
