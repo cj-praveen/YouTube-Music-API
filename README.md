@@ -2,10 +2,9 @@
 
 # YouTube-Music-API
 
-**What's new  in version 1.7?**
+**What's new  in version 1.8?**
 
 - Stable release.
-- **Get Song Information** feature added.
 
 <hr>
 
@@ -49,7 +48,7 @@ import YouTubeMusicAPI
 YouTubeMusicAPI.getsonginfo("Song Name")
 
 # Output
-{'Name': 'Faded', 'ID': 'd0eUMnJ5kTA', 'Total Listeners': '29,808,990', 'Duration': '3:33', 'Artist': 'Alan Walker', 'URL': 'https://music.youtube.com/watch?v=d0eUMnJ5kTA'}
+{'Name': 'Faded', 'ID': 'd0eUMnJ5kTA', 'Total Listeners': '29,808,990', 'Duration': '3:33', 'Artist': 'Alan Walker', 'URL': 'https://music.youtube.com/watch?v=d0eUMnJ5kTA', 'Album Art': 'https://i.ytimg.com/vi/d0eUMnJ5kTA/hq720.jpg'}
 ```
 
 <hr>
