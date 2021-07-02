@@ -2,15 +2,17 @@
 
 # YouTube-Music-API
 
-**What's new  in version 1.8?**
+**What's new  in version 1.9?**
 
 - Stable release.
+- Updated **getsonginfo()** function.
+- Updated Code Format.
 
 <hr>
 
 ## How To Use
 
-- For Playing a song, Create the code like this:
+- To play the song, Create the code like this:
 
 ```python
 # import the module
@@ -23,7 +25,7 @@ import YouTubeMusicAPI
 
 YouTubeMusicAPI.play("Song Name")
 ```
-- For playing the song in VLC Media Player without downloading, Create the code like this:
+- To play the song in VLC Media Player without downloading, Create the code like this:
 ```python
 # import the module
 
@@ -35,7 +37,7 @@ import YouTubeMusicAPI
 
 YouTubeMusicAPI.playonvlc("Song Name")
 ```
-- To get song information, Create the code like this:
+- To get song meta data, Create the code like this:
 ```python
 # import the module
 
@@ -48,7 +50,17 @@ import YouTubeMusicAPI
 YouTubeMusicAPI.getsonginfo("Song Name")
 
 # Output
-{'Name': 'Faded', 'ID': 'd0eUMnJ5kTA', 'Total Listeners': '29,808,990', 'Duration': '3:33', 'Artist': 'Alan Walker', 'URL': 'https://music.youtube.com/watch?v=d0eUMnJ5kTA', 'Album Art': 'https://i.ytimg.com/vi/d0eUMnJ5kTA/hq720.jpg'}
+
+{
+    'song_name': 'Faded', 
+    'total_listeners': '29947694', 
+    'duration': 213, 
+    'artist': 'Alan Walker - Topic', 
+    'album_art': 'https://i.ytimg.com/vi_webp/d0eUMnJ5kTA/maxresdefault.webp', 
+    'artist_url': 'http://music.youtube.com/channel/UCaXJEi-wOOVe2eZZHzyz4mQ', 
+    'track_url': 'https://music.youtube.com/watch?v=d0eUMnJ5kTA', 
+    'track_id': 'd0eUMnJ5kTA'
+}
 ```
 
 <hr>
