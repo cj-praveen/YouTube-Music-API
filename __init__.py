@@ -6,7 +6,6 @@ Copyright (c) 2021 Sijey
 Read more : https://raw.githubusercontent.com/sijey-praveen/YouTube-Music-API/Sijey/LICENSE
 
 """
-
 try:
     from os import system
     from socket import gethostname, gethostbyname
@@ -30,13 +29,13 @@ def NoInternetConnectionError():
         exit()
 
 def check_for_update():
-    if 200 == requests.head("https://pypi.org/project/YouTubeMusicAPI/1.9/").status_code:
+    if 200 == requests.head("https://pypi.org/project/YouTubeMusicAPI/2.0/").status_code:
         if "Windows" == platform.system():
-            system("pip install YouTubeMusicAPI==1.9")
+            system("pip install YouTubeMusicAPI==2.0")
         elif "Darwin" == platform.system():
-            system("pip install YouTubeMusicAPI==1.9")
+            system("pip install YouTubeMusicAPI==2.0")
         elif "Linux" == platform.system():
-            system("pip install YouTubeMusicAPI==1.9")
+            system("pip install YouTubeMusicAPI==2.0")
         
 def url(song_name):
     count = 0
