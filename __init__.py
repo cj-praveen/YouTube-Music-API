@@ -8,73 +8,71 @@ Read more : https://raw.githubusercontent.com/sijey-praveen/YouTube-Music-API/Si
 """
 
 try:
-    import os
-    import socket
+    from os import system
+    from socket import gethostname, gethostbyname
     import webbrowser
     import requests
     import platform
-    from youtube_search import YoutubeSearch
+    from youtube_dl import YoutubeDL
 except Exception as Error:
-    if "No module named 'youtube_search'" in f"{Error}":
+    if "No module named 'youtube_dl'" in f"{Error}":
         if "windows" == platform.system().lower():
-            os.system("pip install youtube-search")
+            system("pip install youtube-dl")
         elif "darwin" == platform.system().lower():
-            os.system("pip3 install youtube-search")
+            system("pip3 install youtube-dl")
         elif "linux" == platform.system().lower():
-            os.system("pip3 install youtube-search")
+            system("pip3 install youtube-dl")
+
 
 def NoInternetConnectionError():
-    Host = socket.gethostname()
-    IP = socket.gethostbyname(Host)
-    if "127.0.0.1" in IP:
+    if "127.0.0.1" == gethostbyname(gethostname()):
         print("You're Offline, Please Connect to Internet!")
         exit()
 
-def AutoUpdate():
-    if 200 == requests.head("https://pypi.org/project/YouTubeMusicAPI/1.8/").status_code:
+def check_for_update():
+    if 200 == requests.head("https://pypi.org/project/YouTubeMusicAPI/1.9/").status_code:
         if "Windows" == platform.system():
-            os.system("pip install YouTubeMusicAPI==1.8")
+            system("pip install YouTubeMusicAPI==1.9")
         elif "Darwin" == platform.system():
-            os.system("pip install YouTubeMusicAPI==1.8")
+            system("pip install YouTubeMusicAPI==1.9")
         elif "Linux" == platform.system():
-            os.system("pip install YouTubeMusicAPI==1.8")
+            system("pip install YouTubeMusicAPI==1.9")
         
-def __main__(song_name):
-    Domain = "https://www.youtube.com/"
-    Sub_Domain = "https://music.youtube.com/"
-    try:
-        query = YoutubeSearch(song_name, max_results=1).to_dict()
-        Data = query[0]
-        Music_ID = Data['id']
-        URL = f"{Sub_Domain}watch?v={Music_ID}"
-        return URL
-    except Exception:
-        count = 0
-        results = str(requests.get(f"https://www.youtube.com/results?q={song_name}").content).split('"')
-        for i in results:
-            count += 1
-            if i == 'WEB_PAGE_TYPE_WATCH':
-                break
-        if results[count - 5] == "/results":
-             raise Exception("No video found.")
-        URL = f"{Sub_Domain}{results[count - 5]}"
-        return URL
+def url(song_name):
+    count = 0
+    results = str(requests.get(f"https://www.youtube.com/results?q={song_name}").content).split('"')
+    for i in results:
+        count += 1
+        if i == 'WEB_PAGE_TYPE_WATCH':
+            break
+    if results[count - 5] == "/results":
+            raise Exception("No video found.")
+    URL = f"{results[count - 5]}"
+    return URL
 
 def play(song_name):
-    song_name = f"{song_name} Album Topic"
-    Music_URL = __main__(song_name)
-    webbrowser.open(Music_URL)
+    Music_URL = url(f"{song_name} Album Topic")
+    webbrowser.open(f"https://music.youtube.com/{Music_URL}")
 
 def playonvlc(song_name):
-    song_name = f"{song_name} Album Topic"
-    Music_URL = __main__(song_name)
-    os.system("start vlc " + Music_URL)
+    Music_URL = url(f"{song_name} Album Topic")
+    system(f"start vlc  https://www.youtube.com/{Music_URL}")
 
 def getsonginfo(song_name):
     song_name = f"{song_name} Album Topic"
-    query = YoutubeSearch(song_name, max_results=1).to_dict()[0]
-    Data = {"Name" : f"{query['title']}", "ID" : f"{query['id']}", "Total Listeners" : f"{str(query['views'].replace(' views', ''))}", "Duration" : f"{query['duration']}", "Artist" : f"{query['channel']}", "URL" : f"https://music.youtube.com/watch?v={query['id']}"}
-    return Data
+    data = YoutubeDL(
+        {
+            "restrictfilenames": True, 
+            "noplaylist": True, 
+            "nocheckcertificate": True,
+            "ignoreerrors": True, 
+            "logtostderr": False, 
+            "quiet": True, 
+            "no_warnings": True
+        }
+    ).extract_info(f"https://www.youtube.com/{url(song_name)}", download=False)
+    return dict(song_name = data['title'], total_listeners = str(data['view_count']), duration = data['duration'], artist = data['uploader'], album_art = data['thumbnail'], artist_url = str(data['uploader_url']).replace("www.", "music."), track_url = f"https://music.youtube.com/watch?v={data['id']}", track_id = data['id'])
 
-NoInternetConnectionError()
-AutoUpdate()
+if __name__ == "__main__":
+    NoInternetConnectionError()
+    check_for_update()
