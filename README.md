@@ -2,54 +2,56 @@
 
 <a href="https://raw.githubusercontent.com/sijey-praveen/YouTube-Music-API/Sijey/LICENSE"><img align="right" src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" width="130px"></a>
 
-**What's new  in version 2.0?**
+**What's new  in version 2.1?**
 
 - Stable release.
-- Updated **get_track()** function.
 - Updated Code Format.
 
-<hr>
-
 ## About
-An unofficial YouTube Music API For Python Programming Language.
-A Python library which Quickly gather the metadata of a Song existing on **YouTube** or **YouTube Music**.
+An unofficial YouTube Music API For Python Programming Language.<br>
+A Python library which Quickly gather the metadata of a Song, Playlist, Artist existing on **YouTube** or **YouTube Music**.
 
-<hr>
 
 ## Basic GET usage:
-
-### get_track()
-- This function can be used to get meta data of a song existing on **YouTube** or **YouTube Music**.
-
-- Use the function with Song or track or music name.
 
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
 
-var = YouTubeMusicAPI("marshmello happier").get_track()
+# type == search type
 
-print(var)
+# available search types >>> ['artist', 'playlist', 'track']
+
+artist = YouTubeMusicAPI("marshmello", type="artist")
+track = YouTubeMusicAPI("marshmello", type="track")
+playlist = YouTubeMusicAPI("marshmello", type="playlist")
+
+print(artist, track, playlist)
 ```
 
-**Output of this program:**
+- output 
 
 ```
-
 {
-    'track_name': 'Marshmello ft. Bastille - Happier (Official Music Video)', 
-    'datePublished': '2018-09-24', 
-    'track_Id': 'm7Bc3pLyij0', 
-    'track_url': 'https://music.youtube.com/watch?v=m7Bc3pLyij0', 
-    'track_image': 'https://i.ytimg.com/vi/m7Bc3pLyij0/hqdefault.jpg', 
-    'interactionCount': '851450849', 
     'artist': 'Marshmello', 
     'artist_url': 'https://music.youtube.com/channel/UCEdvpU2pFRCVqU6yIPyTpMQ', 
     'artist_id': 'UCEdvpU2pFRCVqU6yIPyTpMQ', 
     'artist_image': 'https://yt3.ggpht.com/3kmvsf3NNYy4XLy3hKc2ZVF8O-XkSaahtwUr3KW-YzJKMJsy-g2HePIayrh-JnXWbilYQ6n_=s900-c-k-c0x00ffffff-no-rj'
+} 
+
+{
+    'track_name': 'Marshmello Live at Lollapalooza 2021 [Full DJ Set]', 
+    'datePublished': '2021-08-04', 
+    'track_Id': '8eXFvzMEldk', 
+    'track_url': 'https://music.youtube.com/watch?v=8eXFvzMEldk', 
+    'track_image': 'https://i.ytimg.com/vi/8eXFvzMEldk/hqdefault.jpg'
+}
+
+{
+    'playlist_name': 'Marshmallow Playlist', 
+    'playlist_url': 'https://music.youtube.com/playlist?list=PL4FB1JvhTLrGNSL4odYt72EqjDPJfjSdp', 
+    'playlist_id': 'PL4FB1JvhTLrGNSL4odYt72EqjDPJfjSdp'
 }
 ```
 
-<hr>
-
 ## Contributing
-- <a href="https://github.com/sijey-praveen/PaperPro/pulls">Pull requests</a> are welcome. For major changes or improvement, please open an <a href="https://github.com/sijey-praveen/PaperPro/issues">issue</a> first to discuss what you would like to change or add. 
+- <a href="https://github.com/sijey-praveen/YouTube-Music-API/pulls">Pull requests</a> are welcome. For major changes or improvement, please open an <a href="https://github.com/sijey-praveen/YouTube-Music-API/issues">issue</a> first to discuss what you would like to change or add. 
