@@ -65,4 +65,4 @@ print(playlist)
 ```
 
 ## Contributing
-- For major changes or improvement, please open an <a href="https://github.com/sijey-praveen/YouTube-Music-API/issues">issue</a> and mention what you would like to change or add. 
+- For major changes or improvement, Open an <a href="https://github.com/sijey-praveen/YouTube-Music-API/issues">issue</a> and mention what you would like to change or add. 
