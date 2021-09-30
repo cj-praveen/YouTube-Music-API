@@ -26,7 +26,7 @@ print(artist)
     'artist': 'Marshmello', 
     'artist_url': 'https://music.youtube.com/channel/UCEdvpU2pFRCVqU6yIPyTpMQ', 
     'artist_id': 'UCEdvpU2pFRCVqU6yIPyTpMQ', 
-    'artist_image': 'https://yt3.ggpht.com/3kmvsf3NNYy4XLy3hKc2ZVF8O-XkSaahtwUr3KW-YzJKMJsy-g2HePIayrh-JnXWbilYQ6n_'
+    'artist_image': 'https://yt3.ggpht.com/3kmvsf3NNYy4XLy3hKc2ZVF8O-XkSaahtwUr3KW-YzJKMJsy...'
 } 
 ```
 
