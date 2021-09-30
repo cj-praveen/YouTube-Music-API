@@ -2,7 +2,7 @@
 
 <a href="https://raw.githubusercontent.com/sijey-praveen/YouTube-Music-API/Sijey/LICENSE"><img align="right" src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" width="130px"></a>
 
-**What's new  in version 2.1?**
+**What's new  in version 2.2?**
 
 - Stable release.
 - Updated Code Format.
@@ -16,7 +16,7 @@ A Python library which Quickly gather the metadata of a Song, Playlist, Artist e
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
 
-artist = YouTubeMusicAPI("marshmello", type="artist")
+artist = YouTubeMusicAPI("marshmello").artist()
 
 print(artist)
 
@@ -33,7 +33,7 @@ print(artist)
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
 
-track = YouTubeMusicAPI("marshmello", type="track")
+track = YouTubeMusicAPI("marshmello").track()
 
 print(track)
 
@@ -51,7 +51,7 @@ print(track)
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
 
-playlist = YouTubeMusicAPI("marshmello", type="playlist")
+playlist = YouTubeMusicAPI("marshmello").artist()
 
 print(playlist)
 
