@@ -38,11 +38,7 @@ class YouTubeMusicAPI():
         try: 
             count = count + 29
             id = re[count]
-            if "videoId" == id : id = re[count + 3]
-            else : print(f"No result found."), exit()
         except IndexError : print(f"No result found."), exit()
-
-        print(id)
 
         data = BeautifulSoup(get(f"https://www.youtube.com/watch?v={id}").text, 'html.parser')
 
