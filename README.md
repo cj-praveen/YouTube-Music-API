@@ -7,11 +7,11 @@
 - Stable release.
 - Updated Code Format.
 
-## About
+## 📜 About
 An unofficial YouTube Music API For Python Programming Language.<br>
 A Python library which Quickly gather the metadata of a Song, Playlist, Artist existing on **YouTube** or **YouTube Music**.
 
-## Basic GET usage:
+## 📚 Basic GET usage:
 
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
@@ -64,5 +64,11 @@ print(playlist)
 }
 ```
 
-## Contributing
+
+## 🔗 Links
+[![blog](https://img.shields.io/badge/DEV_Community-000?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/sijeypraveen/youtube-music-api-ecj)
+[![linkedin](https://img.shields.io/badge/PyPI-000?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/YouTubeMusicAPI/)
+
+## 🤝 Contributing
 - For major changes or improvement, Open an <a href="https://github.com/sijey-praveen/YouTube-Music-API/issues">issue</a> and mention what you would like to change or add. 
+
