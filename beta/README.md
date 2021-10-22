@@ -1,4 +1,4 @@
 # Development Progess
 
 - [ ] Accurate search result
-- [ ] Search result suggestions
+- [x] Search result suggestions
