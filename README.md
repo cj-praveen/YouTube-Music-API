@@ -16,6 +16,15 @@
 
 ## 🔑 No Access token or Credentials required.
 
+## 📦 Package Installation
+- Windows
+
+`pip install --upgrade YouTubeMusicAPI`
+
+- Linux & Mac OS
+
+`pip3 install --upgrade YouTubeMusicAPI`
+
 ## 📚 GET Basic 
 
 ## track()
@@ -29,7 +38,7 @@ track = YouTubeMusicAPI("immortals").track()
 print(track)
 ```
 
-![Track](https://i.imgur.com/2C9VdKO.png)
+[![Track](https://i.imgur.com/2C9VdKO.png)](https://i.imgur.com/2C9VdKO.png)
 
 ### 👉 Output of this program
 
@@ -56,7 +65,7 @@ playlist = YouTubeMusicAPI("Alan Walker").playlist()
 print(playlist)
 ```
 
-![Playlist](https://i.imgur.com/9rqpVKR.png)
+[![Playlist](https://i.imgur.com/9rqpVKR.png)](https://i.imgur.com/9rqpVKR.png)
 
 ### 👉 Output of this program
 
