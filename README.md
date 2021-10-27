@@ -1,73 +1,75 @@
 # YouTubeMusicAPI
 
-<a href="https://raw.githubusercontent.com/sijey-praveen/YouTube-Music-API/Sijey/LICENSE"><img align="right" src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" width="130px"></a>
-
-**What's new  in version 2.2?**
+**What's new  in version 2.3?**
 
 - Stable release.
+- Improved Library Speed (**10x Faster than version [2.2]().**)
 - Updated Code Format.
+- Removed **artist()** for temporarily.
 
 ## 📜 About
-An unofficial YouTube Music API For Python Programming Language.<br>
-A Python library which Quickly gather the metadata of a Song, Playlist, Artist existing on **YouTube** or **YouTube Music**.
+- An unofficial YouTube Music API For Python Programming Language.<br>
+- A Python library which Quickly gather the metadata of a Song, Playlist, Artist existing on **YouTube** or **YouTube Music**.
 
-## 📚 Basic GET usage:
+## 👤 Author
+- [Sijey Praveen](https://github.com/sijey-praveen/)
 
-```python
-from YouTubeMusicAPI import YouTubeMusicAPI
+## 🔑 No Access token or Credentials required.
 
-artist = YouTubeMusicAPI("marshmello").artist()
+## 📚 GET Basic 
 
-print(artist)
-
-# output of this program
-
-{
-    'artist': 'Marshmello', 
-    'artist_url': 'https://music.youtube.com/channel/UCEdvpU2pFRCVqU6yIPyTpMQ', 
-    'artist_id': 'UCEdvpU2pFRCVqU6yIPyTpMQ', 
-    'artist_image': 'https://yt3.ggpht.com/3kmvsf3NNYy4XLy3hKc2ZVF8O-XkSaahtwUr3KW-YzJKMJsy...'
-} 
-```
+## track()
+- This function can be used to get metadata of a track or song.
 
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
 
-track = YouTubeMusicAPI("marshmello").track()
+track = YouTubeMusicAPI("immortals").track()
 
 print(track)
+```
 
-# output of this program
+![Track](https://i.imgur.com/2C9VdKO.png)
 
+### 👉 Output of this program
+
+```
 {
-    'track_name': 'Marshmello Live at Lollapalooza 2021 [Full DJ Set]', 
-    'datePublished': '2021-08-04', 
-    'track_Id': '8eXFvzMEldk', 
-    'track_url': 'https://music.youtube.com/watch?v=8eXFvzMEldk', 
-    'track_image': 'https://i.ytimg.com/vi/8eXFvzMEldk/hqdefault.jpg'
+    'name': 'Fall Out Boy - Immortals (Official Music Video) (From "Big Hero 6")', 
+    'datePublished': '2014-10-13', 
+    'Id': 'l9PxOanFjxQ', 
+    'url': 'https://music.youtube.com/watch?v=l9PxOanFjxQ', 
+    'image': 'https://i.ytimg.com/vi/l9PxOanFjxQ/hqdefault.jpg'
 }
 ```
+
+<hr>
+
+## playlist()
+- This function can be used to get metadata of a playlist.
 
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
 
-playlist = YouTubeMusicAPI("marshmello").artist()
+playlist = YouTubeMusicAPI("Alan Walker").playlist()
 
 print(playlist)
+```
 
-# output of this program
+![Playlist](https://i.imgur.com/9rqpVKR.png)
 
+### 👉 Output of this program
+
+```
 {
-    'playlist_name': 'Marshmallow Playlist', 
-    'playlist_url': 'https://music.youtube.com/playlist?list=PL4FB1JvhTLrGNSL4odYt72EqjDPJfjSdp', 
-    'playlist_id': 'PL4FB1JvhTLrGNSL4odYt72EqjDPJfjSdp'
+    'name': 'Alan Walker - Teledyski', 
+    'url': 'https://music.youtube.com/playlist?list=PLwcXu6NozQZjVjazNF0fqbdQ8e15mnMJ4', 
+    'Id': 'PLwcXu6NozQZjVjazNF0fqbdQ8e15mnMJ4'
 }
 ```
 
-
-## 🔗 Links
-[![blog](https://img.shields.io/badge/DEV_Community-000?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/sijeypraveen/youtube-music-api-ecj)
-[![linkedin](https://img.shields.io/badge/PyPI-000?style=for-the-badge&logo=pypi&logoColor=white)](https://pypi.org/project/YouTubeMusicAPI/)
+## 🧾 License
+- [MIT License](https://mit-license.org/)
 
 ## 🤝 Contributing
 - For major changes or improvement, Open an <a href="https://github.com/sijey-praveen/YouTube-Music-API/issues">issue</a> and mention what you would like to change or add. 
