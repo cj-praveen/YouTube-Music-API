@@ -14,7 +14,7 @@
 ## 👤 Author
 - [Sijey Praveen](https://github.com/sijey-praveen/)
 
-## 🔑 No Access token or Credentials required.
+## 🔑 ❌ No Access token or Credentials required.
 
 ## 📦 Package Installation
 - Windows
