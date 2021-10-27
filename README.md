@@ -3,7 +3,7 @@
 **What's new  in version 2.3?**
 
 - Stable release.
-- Improved Library Speed (**10x Faster than version [2.2]().**)
+- Improved Library Speed (**10x Faster than version [2.2](https://pypi.org/project/YouTubeMusicAPI/2.2/).**)
 - Updated Code Format.
 - Removed **artist()** for temporarily.
 
