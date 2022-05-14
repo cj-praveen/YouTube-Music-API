@@ -1,9 +1,8 @@
 # [YouTubeMusicAPI](https://pypi.org/project/YouTubeMusicAPI/)
 
-**What's new  in version 2.4?**
+**What's new  in version 2.5?**
 
 - Stable release.
-- New **searchUrls()** function added.
 
 ## About
 - An unofficial YouTube Music API For Python Programming Language.<br>
@@ -13,11 +12,11 @@
 ## Package Installation
 - Windows
 
-`pip install --upgrade YouTubeMusicAPI==2.4`
+`pip install --upgrade YouTubeMusicAPI==2.5`
 
 - Linux & Mac OS
 
-`pip3 install --upgrade YouTubeMusicAPI==2.4`
+`pip3 install --upgrade YouTubeMusicAPI==2.5`
 
 ## GET Basic 
 
@@ -28,18 +27,18 @@ This function can be used to get metadata of a track or song.
 ```python
 from YouTubeMusicAPI import YouTubeMusicAPI
 
-track = YouTubeMusicAPI().track("immortals")
+track = YouTubeMusicAPI().track("faded")
 
 print(track)
 
 # output
-
 {
-    'name': 'Fall Out Boy - Immortals (Official Music Video) (From "Big Hero 6")', 
-    'datePublished': '2014-10-13', 
-    'Id': 'l9PxOanFjxQ', 
-    'url': 'https://music.youtube.com/watch?v=l9PxOanFjxQ', 
-    'image': 'https://i.ytimg.com/vi/l9PxOanFjxQ/hqdefault.jpg'
+    'name': 'Alan Walker - Faded',
+    'Id': '60ItHLz5WEA',
+    'url': 'https://music.youtube.com/watch?v=60ItHLz5WEA',
+    'image': 'https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg',
+    'author_name': 'Alan Walker',
+    'author_url': 'https://www.youtube.com/c/Alanwalkermusic'
 }
 ```
 
@@ -57,11 +56,12 @@ playlist = YouTubeMusicAPI().playlist("Alan Walker")
 print(playlist)
 
 # output
-
 {
-    'name': 'Alan Walker - Teledyski', 
-    'url': 'https://music.youtube.com/playlist?list=PLwcXu6NozQZjVjazNF0fqbdQ8e15mnMJ4', 
-    'Id': 'PLwcXu6NozQZjVjazNF0fqbdQ8e15mnMJ4'
+    'name': 'Alan Walker - Topic',
+    'url': 'https://music.youtube.com/playlist?list=PLnXZKEb05pjONeO2hRSnd077lc76f_6Rf',
+    'Id': 'PLnXZKEb05pjONeO2hRSnd077lc76f_6Rf',
+    'author_name': 'RadioActiva',
+    'author_url': 'https://www.youtube.com/channel/UC_48oWtBy2_qqe_QJUxROlA'
 }
 ```
 
@@ -77,7 +77,6 @@ urls = YouTubeMusicAPI().searchUrls("alone")
 print(urls)
 
 #output
-
 [
     'https://music.youtube.com/watch?v=bPs0xFd4skY',
     'https://music.youtube.com/watch?v=TCFuCCY-pxc',
