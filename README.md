@@ -58,9 +58,6 @@ urls = YouTubeMusicAPI().searchUrls("alone")
 print(urls)
 ```
 
-## Author
-- [Sijey Praveen](https://github.com/sijey-praveen/)
-
 ## License
 
 (c) 2020 - 2022 Sijey All rights reserved.
