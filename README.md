@@ -7,6 +7,8 @@
 ## About
 An open-source Python library which Quickly gather the metadata of a Song, Playlist existing on **YouTube** or **YouTube Music**. No Access token or Credentials required.
 
+[![PyPI](https://pypi.org/static/images/logo-small.95de8436.svg)](https://pypi.org/project/YouTubeMusicAPI/)
+
 ## Package Installation
 - Windows
 
