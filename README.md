@@ -66,4 +66,4 @@ The source is free to copy, modify, publish, use, compile, sell, or distribute..
 
 ## Support / Sponsor
 
-If this tool helped you, give it a star on GitHub and please consider becoming a [Patreon sponsor](https://www.patreon.com/sijeypraveen).
+If this tool helped you, give it a star on GitHub and consider becoming a [Patreon sponsor](https://www.patreon.com/sijeypraveen).
