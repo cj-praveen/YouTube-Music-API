@@ -60,6 +60,10 @@ print(urls)
 
 ## License
 
-(c) 2020 - 2022 Sijey All rights reserved.
+Copyright (c) 2020 - present, Sijey. All rights reserved.
 
 The source is free to copy, modify, publish, use, compile, sell, or distribute.., licensed under the [MIT License](https://mit-license.org/).
+
+## Support / Sponsor
+
+If this tool helped you, give it a star on GitHub and please consider becoming a [Patreon sponsor](https://www.patreon.com/sijeypraveen).
