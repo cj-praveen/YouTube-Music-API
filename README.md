@@ -10,7 +10,7 @@ An open-source Python library which helps to find a song or track existing on **
 
 ## Package Installation
 ```
-pip install YouTubeMusicAPI==2.7
+pip install YouTubeMusicAPI==2.6
 ```
 
 ## Example
