@@ -1,11 +1,6 @@
 # [YouTubeMusicAPI](https://pypi.org/project/YouTubeMusicAPI/)
 
-**What's new  in version 2.5?**
-
-- Stable release.
-
-## About
-An open-source Python library which Quickly gather the metadata of a Song, Playlist existing on **YouTube** or **YouTube Music**. No Access token or Credentials required.
+An open-source Python library which helps to find a song or track existing on **YouTube Music**
 
 [![Downloads](https://static.pepy.tech/personalized-badge/youtubemusicapi?period=total&units=none&left_color=black&right_color=blue&left_text=Downloads)](https://pepy.tech/project/youtubemusicapi)
 
@@ -18,44 +13,14 @@ An open-source Python library which Quickly gather the metadata of a Song, Playl
 
 `pip3 install --upgrade YouTubeMusicAPI==2.5`
 
-## GET Basic 
-
-- track()
-
-This function can be used to get metadata of a track or song.
+## Example
 
 ```python
-from YouTubeMusicAPI import YouTubeMusicAPI
+from YouTubeMusicAPI import Search
 
-track = YouTubeMusicAPI().track("faded")
+result = Search("Alan walker faded")
 
-print(track)
-```
-
-<hr>
-
-- playlist()
-
-This function can be used to get metadata of a playlist.
-
-```python
-from YouTubeMusicAPI import YouTubeMusicAPI
-
-playlist = YouTubeMusicAPI().playlist("Alan Walker")
-
-print(playlist)
-```
-
-- searchUrls()
-
-This function can be used to get all result urls based on query.
-
-```python
-from YouTubeMusicAPI import YouTubeMusicAPI
-
-urls = YouTubeMusicAPI().searchUrls("alone")
-
-print(urls)
+print(result)
 ```
 
 ## License
@@ -63,7 +28,3 @@ print(urls)
 Copyright (c) 2020 - present, Sijey. All rights reserved.
 
 The source is free to copy, modify, publish, use, compile, sell, or distribute.., licensed under the [MIT License](https://mit-license.org/).
-
-## Support / Sponsor
-
-If this tool helped you, give it a star on GitHub and consider becoming a [Patreon sponsor](https://www.patreon.com/sijeypraveen).
