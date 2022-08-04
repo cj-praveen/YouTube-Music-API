@@ -18,17 +18,6 @@ from YouTubeMusicAPI import Search
 result = Search("Alan walker faded")
 
 print(result)
-
-# output
-
-{
-    "name": "Faded",
-    "Id": "pIWaVJPl0-c",
-    "url": "https://music.youtube.com/watch?v=pIWaVJPl0-c",
-    "image": "https://i.ytimg.com/vi/pIWaVJPl0-c/hqdefault.jpg",
-    "author_name": "Alan Walker - Topic",
-    "author_url": "https://www.youtube.com/channel/UCaXJEi-wOOVe2eZZHzyz4mQ"
-}
 ```
 
 ## License
