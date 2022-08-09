@@ -1,6 +1,5 @@
 [![Loading Image](https://img.shields.io/badge/GitHub-sijey--praveen/Shift-ebebeb?logo=github&style=social)](https://github.com/sijey-praveen/Shift/)
 [![Loading Image](https://img.shields.io/badge/PyPI-pypi.org/project/YouTubeMusicAPI-ebebeb?logo=pypi&style=social)](https://pypi.org/project/YouTubeMusicAPI/)
-[![Loading Image](https://img.shields.io/badge/Libraries.io-pypi.org/project/YouTubeMusicAPI-ebebeb?logo=librariesdotio&style=social)](https://libraries.io/pypi/YouTubeMusicAPI)
 
 # [YouTubeMusicAPI](https://pypi.org/project/YouTubeMusicAPI/)
 
