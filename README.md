@@ -22,4 +22,4 @@ print(result)
 
 *Copyright (c) 2020 - present, Sijey. All rights reserved.*
 
-This Python Package is licensed under the [MIT License](https://mit-license.org/).
+This Python Package is officially hosted in [PyPI](https://pypi.org/project/YouTubeMusicAPI/), [GitHub](https://github.com/sijey-praveen/YouTube-Music-API) by the Author and licensed under the [MIT License](https://mit-license.org/).
