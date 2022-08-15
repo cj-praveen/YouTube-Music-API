@@ -1,4 +1,4 @@
-# [YouTubeMusicAPI](https://pypi.org/project/YouTubeMusicAPI/)
+# YouTubeMusicAPI
 
 An open-source Python library which helps to find a song or track existing on **YouTube Music**
 
