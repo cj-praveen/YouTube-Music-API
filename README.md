@@ -1,9 +1,6 @@
 # YouTubeMusicAPI
 
-*An open-source Python library which helps to find a song or track existing on **YouTube Music***
-
-## Package Installation
-- You can use [pip](https://pypi.org/project/pip/) to install the package. Run the following command in your terminal.
+A tiny Python package which helps to find a song or track existing on **YouTube Music**.
 
 ```
 pip install YouTubeMusicAPI==2.6.0
@@ -12,26 +9,38 @@ pip install YouTubeMusicAPI==2.6.0
 ## Example
 
 ```python
+# Import the Search() function from 'YouTubeMusicAPI'.
 from YouTubeMusicAPI import Search
 
+# 
 result = Search("Alan walker faded")
 
+# print the program output onto the screen.
 print(result)
-
->>> {'name': 'Faded', 'Id': 'pIWaVJPl0-c', 'url': 'https://music.youtube.com/watch?v=pIWaVJPl0-c', 'image': 'https://i.ytimg.com/vi/pIWaVJPl0-c/hqdefault.jpg', 'author_name': 'Alan Walker - Topic', 'author_url': 'https://www.youtube.com/channel/UCaXJEi-wOOVe2eZZHzyz4mQ'}
 ```
 
-## Contributions & Contributors
+## Release history
 
-[![GitHub issues](https://img.shields.io/github/issues-raw/sijey-praveen/YouTube-Music-API?color=yellow&logo=github&style=flat-square)](https://github.com/sijey-praveen/YouTube-Music-API/issues)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/sijey-praveen/YouTube-Music-API?color=green&logo=github&style=flat-square)](https://github.com/sijey-praveen/YouTube-Music-API/issues?q=is:issue+is:closed)
-
-Contributions are always welcome.
-
-[![Loading Image](https://contributors-img.web.app/image?repo=sijey-praveen/YouTube-Music-API)](https://github.com/sijey-praveen/YouTube-Music-API/graphs/contributors)
+- [1.0](https://pypi.org/project/YouTubeMusicAPI/1.0/)
+- [1.2](https://pypi.org/project/YouTubeMusicAPI/1.2/)
+- [1.3](https://pypi.org/project/YouTubeMusicAPI/1.3/)
+- [1.4](https://pypi.org/project/YouTubeMusicAPI/1.4/)
+- [1.5](https://pypi.org/project/YouTubeMusicAPI/1.5/)
+- [1.6](https://pypi.org/project/YouTubeMusicAPI/1.6/)
+- [1.7](https://pypi.org/project/YouTubeMusicAPI/1.7/)
+- [1.8](https://pypi.org/project/YouTubeMusicAPI/1.8/)
+- [1.9](https://pypi.org/project/YouTubeMusicAPI/1.9/)
+- [2.0](https://pypi.org/project/YouTubeMusicAPI/2.0/)
+- [2.1](https://pypi.org/project/YouTubeMusicAPI/2.1/)
+- [2.2](https://pypi.org/project/YouTubeMusicAPI/2.2/)
+- [2.3](https://pypi.org/project/YouTubeMusicAPI/2.3/)
+- [2.4](https://pypi.org/project/YouTubeMusicAPI/2.4/)
+- [2.5](https://pypi.org/project/YouTubeMusicAPI/2.5/)
+- [2.6.0](https://pypi.org/project/YouTubeMusicAPI/2.6.0/)
+<!-- - []() -->
 
 ## License
 
 *Copyright (c) 2020 - present, Sijey. All rights reserved.*
 
-This Python Package is officially hosted in [PyPI](https://pypi.org/project/YouTubeMusicAPI/), [GitHub](https://github.com/sijey-praveen/YouTube-Music-API) by the Author and licensed under the [MIT](https://mit-license.org/).
+This Python Package is distributed under the [MIT License](https://mit-license.org/) by the Author.
