@@ -1,6 +1,6 @@
 # YouTubeMusicAPI
 
-A tiny Python package which helps to find a song or track existing on **YouTube Music**.
+A tiny fast Python package which helps to find a song or track existing on [YouTube Music](https://music.youtube.com/).
 
 ```
 pip install YouTubeMusicAPI==2.6.0
@@ -16,10 +16,10 @@ pip install YouTubeMusicAPI==2.6.0
 from YouTubeMusicAPI import Search
 
 # 
-result = Search("Alan walker faded")
+data = Search("Alan walker faded")
 
 # print the program output onto the screen.
-print(result)
+print(data)
 ```
 
 ## Release history
