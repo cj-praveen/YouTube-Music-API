@@ -6,9 +6,6 @@ A tiny, fast Python package for searching for songs on [YouTube Music](https://m
 pip install YouTubeMusicAPI==2.6.0
 ```
 
-[![Downloads](https://static.pepy.tech/personalized-badge/youtubemusicapi?period=total&units=none&left_color=grey&right_color=orange&left_text=Downloads)](https://pepy.tech/project/youtubemusicapi)
-
-
 ## Example
 
 ```python
