@@ -21,6 +21,4 @@ print(data)
 
 ## License
 
-*Copyright (c) 2020 - present, Sijey. All rights reserved.*
-
-This Python Package is distributed under the [MIT License](https://mit-license.org/) by the Author.
+This Python Package is distributed under the [MIT License](https://mit-license.org/).
