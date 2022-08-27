@@ -18,3 +18,6 @@ data = Search("Alan walker faded")
 # print the program output onto the screen.
 print(data)
 ```
+
+## License
+This Python package is distributed under the [MIT License](https://mit-license.org/).
