@@ -1,6 +1,6 @@
 # YouTubeMusicAPI
 
-A tiny, fast Python package for searching for songs on [YouTube Music](https://music.youtube.com/).
+A Python package for searching songs on [YouTube Music](https://music.youtube.com/).
 
 ```
 pip install YouTubeMusicAPI==2.6.0
