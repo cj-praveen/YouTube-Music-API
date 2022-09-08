@@ -3,7 +3,7 @@
 A Python package for searching songs on [YouTube Music](https://music.youtube.com/).
 
 ```
-pip install YouTubeMusicAPI==2.6.0
+pip install YouTubeMusicAPI
 ```
 
 ## Example
