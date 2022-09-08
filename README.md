@@ -9,14 +9,11 @@ pip install YouTubeMusicAPI==2.6.0
 ## Example
 
 ```python
-# Import the Search() function from 'YouTubeMusicAPI'.
 from YouTubeMusicAPI import Search
 
-# 
-data = Search("Alan walker faded")
+result = Search("Alan walker faded")
 
-# print the program output onto the screen.
-print(data)
+print(result)
 ```
 
 ## License
