@@ -1,6 +1,6 @@
-# YouTubeMusicAPI
+# YouTubeMusicAPI 2.7
 
-A Python package for searching songs on [YouTube Music](https://music.youtube.com/).
+The unofficial search API for [YouTube Music](https://music.youtube.com/).
 
 ```
 pip install YouTubeMusicAPI
@@ -9,11 +9,21 @@ pip install YouTubeMusicAPI
 ## Example
 
 ```python
-from YouTubeMusicAPI import Search
+import YouTubeMusicAPI
 
-result = Search("Alan walker faded")
+result = YouTubeMusicAPI.Search("Alan walker faded")
 
 print(result)
+
+# output
+# {
+#     "name": "Alan Walker - Faded",
+#     "Id": "60ItHLz5WEA",
+#     "url": "https://music.youtube.com/watch?v=60ItHLz5WEA",
+#     "image": "https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg",
+#     "author_name": "Alan Walker",
+#     "author_url": "https://www.youtube.com/c/Alanwalkermusic"
+# }
 ```
 
 ## License
