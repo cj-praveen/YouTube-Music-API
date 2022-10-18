@@ -1,6 +1,6 @@
 # YouTubeMusicAPI 2.7
 
-The unofficial search API for [YouTube Music](https://music.youtube.com/).
+The search API for [YouTube Music](https://music.youtube.com/).
 
 ```
 pip install YouTubeMusicAPI
