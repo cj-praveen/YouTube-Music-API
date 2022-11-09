@@ -1,9 +1,9 @@
-# YouTubeMusicAPI 2.7
+# YouTubeMusicAPI 2.7.1
 
 The search API for [YouTube Music](https://music.youtube.com/).
 
 ```
-pip install YouTubeMusicAPI
+python -m pip install -U YouTubeMusicAPI
 ```
 
 ## Example
@@ -11,18 +11,24 @@ pip install YouTubeMusicAPI
 ```python
 import YouTubeMusicAPI
 
-result = YouTubeMusicAPI.Search("Alan walker faded")
+result = YouTubeMusicAPI.Search("shape of you")
 
 print(result)
 
 # output
 # {
-#     "name": "Alan Walker - Faded",
-#     "Id": "60ItHLz5WEA",
-#     "url": "https://music.youtube.com/watch?v=60ItHLz5WEA",
-#     "image": "https://i.ytimg.com/vi/60ItHLz5WEA/hqdefault.jpg",
-#     "author_name": "Alan Walker",
-#     "author_url": "https://www.youtube.com/c/Alanwalkermusic"
+#     "name": "Ed Sheeran - Shape of You (Official Music Video)",
+#     "id": "JGwWNGJdvx8",
+#     "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8",
+#     "images": [
+#         "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg",
+#         "https://i.ytimg.com/vi/JGwWNGJdvx8/default.jpg",
+#         "https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg",
+#         "https://i.ytimg.com/vi/JGwWNGJdvx8/sddefault.jpg",
+#         "https://i.ytimg.com/vi/JGwWNGJdvx8/maxresdefault.jpg"
+#     ],
+#     "author_name": "Ed Sheeran",
+#     "author_url": "https://www.youtube.com/c/EdSheeran"
 # }
 ```
 
