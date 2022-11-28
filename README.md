@@ -1,10 +1,8 @@
-# YouTubeMusicAPI
-
-## Version: [2.7.1](https://pypi.org/project/YouTubeMusicAPI/2.7.1/)
+# [YouTubeMusicAPI](https://pypi.org/project/YouTubeMusicAPI/)
 
 ## Package Installation:
 ```
-python -m pip install YouTubeMusicAPI==2.7.1
+python -m pip install -U YouTubeMusicAPI==2.7.1
 ```
 
 ## [Documentation](https://youtube-music-api.readthedocs.io/en/latest/)
