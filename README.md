@@ -1,36 +1,18 @@
-# YouTubeMusicAPI 2.7.1
+# YouTubeMusicAPI
 
-The search API for [YouTube Music](https://music.youtube.com/).
+## Version: [2.7.1](https://pypi.org/project/YouTubeMusicAPI/2.7.1/)
 
+## Package Installation:
 ```
-python -m pip install -U YouTubeMusicAPI
-```
-
-## Example
-
-```python
-import YouTubeMusicAPI
-
-result = YouTubeMusicAPI.Search("shape of you")
-
-print(result)
-
-# output
-# {
-#     "name": "Ed Sheeran - Shape of You (Official Music Video)",
-#     "id": "JGwWNGJdvx8",
-#     "url": "https://music.youtube.com/watch?v=JGwWNGJdvx8",
-#     "images": [
-#         "https://i.ytimg.com/vi/JGwWNGJdvx8/hqdefault.jpg",
-#         "https://i.ytimg.com/vi/JGwWNGJdvx8/default.jpg",
-#         "https://i.ytimg.com/vi/JGwWNGJdvx8/mqdefault.jpg",
-#         "https://i.ytimg.com/vi/JGwWNGJdvx8/sddefault.jpg",
-#         "https://i.ytimg.com/vi/JGwWNGJdvx8/maxresdefault.jpg"
-#     ],
-#     "author_name": "Ed Sheeran",
-#     "author_url": "https://www.youtube.com/c/EdSheeran"
-# }
+python -m pip install YouTubeMusicAPI==2.7.1
 ```
 
-## License
-This Python package is distributed under the [MIT License](https://mit-license.org/).
+## [Documentation](https://youtube-music-api.readthedocs.io/en/latest/)
+## [License](https://mit-license.org/)
+
+## [Source code](https://github.com/cj-praveen/YouTube-Music-API/blob/master/src/YouTubeMusicAPI/__init__.py)
+
+## Clone our repository:
+```
+git clone https://github.com/cj-praveen/YouTube-Music-API.git
+```
