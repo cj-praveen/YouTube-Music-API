@@ -1,5 +1,7 @@
 # [YouTubeMusicAPI](https://pypi.org/project/YouTubeMusicAPI/)
 
+The search API for [YouTube Music](https://music.youtube.com/).
+
 ## Package Installation:
 ```
 python -m pip install -U YouTubeMusicAPI
