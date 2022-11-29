@@ -7,6 +7,7 @@ from warnings import filterwarnings
 from urllib.parse import quote
 
 app = Flask(__name__)
+CORSA(app)
 headers: dict = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36"}
 filterwarnings("ignore", category=DeprecationWarning)
 
@@ -18,6 +19,7 @@ def getVideoId(query: str):
 	return None
 
 @app.route("/get_url", methods=["GET"])
+@cross_origin()
 def get_url():
 	if request.args.get("query"):
 		videoId = getVideoId(request.args.get("query"))
@@ -29,6 +31,7 @@ def get_url():
 		return Response(response="No Search Query Passed", status=400, mimetype="text/plain")
 
 @app.route("/get_track", methods=["GET"])
+@cross_origin()
 def get_track():
 	if request.args.get("query"):					
 		videoId = getVideoId(request.args.get("query"))
