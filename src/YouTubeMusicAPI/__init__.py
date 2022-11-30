@@ -1,8 +1,8 @@
 from urllib.request import Request, urlopen
 from urllib.parse import quote
-from re import search
+import re
 from warnings import filterwarnings
-from json import loads, dumps
+from json import loads
 
 filterwarnings("ignore", category=DeprecationWarning)
 
@@ -14,12 +14,12 @@ def Search(query: str):
 
     page_source: str = urlopen(Request(f"https://music.youtube.com/search?q={quote(query)}", headers=headers)).read().decode("unicode_escape")
 
-    if id := search('"videoId":"(.*?)"', page_source):
+    if id := re.search('"videoId":"(.*?)"', page_source):
         id = loads(f"{{{id.group()}}}")["videoId"]
 
         meta = loads(urlopen(Request(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={id}", headers=headers)).read())
 
-        return dumps(dict(
+        return dict(
             name = meta["title"],
             id = id,
             url = f"https://music.youtube.com/watch?v={id}",
@@ -32,7 +32,7 @@ def Search(query: str):
             ],
             author_name = meta["author_name"],
             author_url = meta["author_url"]
-        ))
+        )
 
     else:
-        return dict(message = "No Track Found!")
+        return None
