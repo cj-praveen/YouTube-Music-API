@@ -14,11 +14,9 @@ def Search(query: str):
 
     page_source: str = urlopen(Request(f"https://music.youtube.com/search?q={quote(query)}", headers=headers)).read().decode("unicode_escape")
 
-    id = search('"videoId":"(.*?)"', page_source)
-
-    if id:
+    if id := search('"videoId":"(.*?)"', page_source):
         id = loads(f"{{{id.group()}}}")["videoId"]
-        
+
         meta = loads(urlopen(Request(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={id}", headers=headers)).read())
 
         return dumps(dict(

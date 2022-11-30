@@ -13,49 +13,44 @@ filterwarnings("ignore", category=DeprecationWarning)
 
 def getVideoId(query: str):
 	page_source: str = urlopen(Request(f"https://music.youtube.com/search?q={quote(query)}", headers=headers)).read().decode("unicode_escape")
-	videoId = search('"videoId":"(.*?)"', page_source)
-	if videoId:
+	if videoId := search('"videoId":"(.*?)"', page_source):
 		return loads(f"{{{videoId.group()}}}")["videoId"]
 	return None
 
 @app.route("/get_url", methods=["GET"])
 @cross_origin()
 def get_url():
-	if request.args.get("query"):
-		videoId = getVideoId(request.args.get("query"))
-		if videoId:
-			return Response(response=f"https://music.youtube.com/watch?v={videoId}", status=200, mimetype="text/plain")
-		else:
-			return Response(response="No URL Found", status=405, mimetype="text/plain")
-	else:
+	if not request.args.get("query"):
 		return Response(response="No Search Query Passed", status=400, mimetype="text/plain")
+	if videoId := getVideoId(request.args.get("query")):
+		return Response(response=f"https://music.youtube.com/watch?v={videoId}", status=200, mimetype="text/plain")
+	else:
+		return Response(response="No URL Found", status=405, mimetype="text/plain")
 
 @app.route("/get_track", methods=["GET"])
 @cross_origin()
 def get_track():
-	if request.args.get("query"):					
-		videoId = getVideoId(request.args.get("query"))
-		if videoId:
-			meta: dict = loads(urlopen(Request(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={videoId}", headers=headers)).read())
-
-			return Response(dumps(dict(
-				name = meta["title"],
-				id = videoId,
-				url = f"https://music.youtube.com/watch?v={videoId}",
-				images = [
-					f"https://i.ytimg.com/vi/{videoId}/hqdefault.jpg",
-					f"https://i.ytimg.com/vi/{videoId}/default.jpg",
-					f"https://i.ytimg.com/vi/{videoId}/mqdefault.jpg",
-					f"https://i.ytimg.com/vi/{videoId}/sddefault.jpg",
-					f"https://i.ytimg.com/vi/{videoId}/maxresdefault.jpg"
-				],
-				author_name = meta["author_name"],
-				author_url = meta["author_url"]
-			), indent=4), status=200, mimetype="application/json")
-
-		else:
-			return Response(response="No Result Found", status=405, mimetype="text/plain")
-	else:
+	if not request.args.get("query"):
 		return Response(response="No Search Query Passed", status=400, mimetype="text/plain")
+	if videoId := getVideoId(request.args.get("query")):
+		meta: dict = loads(urlopen(Request(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={videoId}", headers=headers)).read())
+
+		return Response(dumps(dict(
+			name = meta["title"],
+			id = videoId,
+			url = f"https://music.youtube.com/watch?v={videoId}",
+			images = [
+				f"https://i.ytimg.com/vi/{videoId}/hqdefault.jpg",
+				f"https://i.ytimg.com/vi/{videoId}/default.jpg",
+				f"https://i.ytimg.com/vi/{videoId}/mqdefault.jpg",
+				f"https://i.ytimg.com/vi/{videoId}/sddefault.jpg",
+				f"https://i.ytimg.com/vi/{videoId}/maxresdefault.jpg"
+			],
+			author_name = meta["author_name"],
+			author_url = meta["author_url"]
+		), indent=4), status=200, mimetype="application/json")
+
+	else:
+		return Response(response="No Result Found", status=405, mimetype="text/plain")
 
 app.run("0.0.0.0", 5000)
