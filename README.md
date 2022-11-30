@@ -9,9 +9,22 @@ python -m pip install -U pip
 python -m pip install -U YouTubeMusicAPI
 ```
 
-## Contribution:
+## Build from source code:
+- Clone the repository
 ```
 git clone https://github.com/cj-praveen/YouTube-Music-API.git
+```
+- cd into the directory
+```
+cd YouTube-Music-API
+```
+- Install dependencies
+```
+python -m pip install -U build setuptools
+```
+- Run the following command given below to build:
+```
+python -m build
 ```
 
 ## [Documentation](https://youtube-music-api.readthedocs.io/en/latest/)
