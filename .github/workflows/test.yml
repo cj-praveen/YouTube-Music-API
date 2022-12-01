@@ -1,6 +1,8 @@
 name: Test Package
 on:
   push:
+    paths:
+      - "src/YouTubeMusicAPI*"
 jobs:
   build:
     runs-on: ubuntu-latest
