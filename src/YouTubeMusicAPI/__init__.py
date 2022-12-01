@@ -6,7 +6,11 @@ import json
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-def Search(query: str):    
+def Search(query: str):
+    """
+    The search API for YouTube Music.
+    """
+    
     headers: dict = {
         "User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"
     }
