@@ -1,10 +1,11 @@
-name: Test Package
+name: Test Code
 on:
   push:
     branches:
     - 'master'
     paths:
-    - '*.py'
+    - 'src/YouTubeMusicAPI/__init__.py'
+    - 'test.py'
 jobs:
   build:
     runs-on: ubuntu-latest
