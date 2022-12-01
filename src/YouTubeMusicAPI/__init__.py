@@ -23,7 +23,7 @@ def Search(query: str):
             trackName = meta["title"],
             trackId = trackId,
             trackUrl = f"https://music.youtube.com/watch?v={trackId}",
-            artworkUrl = f"https://img.youtube.com/vi/{trackId}/0.jpg"
+            artworkUrl = f"https://img.youtube.com/vi/{trackId}/0.jpg",
             artistName = meta["author_name"],
             artistUrl = meta["author_url"]
         )
