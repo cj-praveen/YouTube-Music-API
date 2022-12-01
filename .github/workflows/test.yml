@@ -1,8 +1,8 @@
 name: Test Package
 on:
   push:
-    branches: [ master ]
-    paths: ['*.py']
+    branches:
+    - 'master'
 jobs:
   build:
     runs-on: ubuntu-latest
