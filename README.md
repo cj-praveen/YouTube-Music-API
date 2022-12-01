@@ -9,7 +9,33 @@ python -m pip install -U pip
 python -m pip install -U YouTubeMusicAPI
 ```
 
-## Build from source code:
+## Get Started
+- Here is an example program.
+```py
+import YouTubeMusicAPI
+
+query: str = "alan walker faded"
+
+result = YouTubeMusicAPI.Search(query)
+
+if result:
+    print(result)
+else:
+    print("No Result Found")
+```
+- If a result for your search query is found while running the above program, it will return an **dict object**; otherwise, it will return **None**. 
+```json
+{
+    "trackName": "...",
+    "trackId": "...",
+    "trackUrl": "...",
+    "artworkUrl": "...",
+    "artistName": "...",
+    "artistUrl": "..."
+}
+```
+
+## Building from source code:
 - Clone the repository
 ```
 git clone https://github.com/cj-praveen/YouTube-Music-API.git
@@ -31,5 +57,3 @@ sudo apt-get install python3-venv
 ```
 python -m build
 ```
-
-## [Documentation](https://youtube-music-api.readthedocs.io/en/latest/)
