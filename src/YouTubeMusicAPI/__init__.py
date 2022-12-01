@@ -15,7 +15,7 @@ def Search(query: str):
     page_source: str = urllib.request.urlopen(urllib.request.Request(f"https://music.youtube.com/search?q={urllib.parse.quote(query)}", headers=headers)).read().decode("unicode_escape")
 
     if trackId := re.search('"videoId":"(.*?)"', page_source):
-        trackId = loads(f"{{{trackId.group()}}}")["videoId"]
+        trackId = json.loads(f"{{{trackId.group()}}}")["videoId"]
 
         meta = json.loads(urllib.request.urlopen(urllib.request.Request(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={trackId}", headers=headers)).read())
 
