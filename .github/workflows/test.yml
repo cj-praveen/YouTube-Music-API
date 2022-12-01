@@ -1,8 +1,8 @@
 name: Test Package
 on:
   push:
-    paths:
-      - "src/YouTubeMusicAPI*"
+    branches: [ master ]
+    paths: ['*.py']
 jobs:
   build:
     runs-on: ubuntu-latest
