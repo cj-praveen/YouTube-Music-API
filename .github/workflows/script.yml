@@ -10,5 +10,5 @@ jobs:
         run: python -m pip install -U build setuptools
       - name: Build
         run: python -m build
-      - name: package file
-        run: ls dist
+      - name: move file
+        run: mv dist/* src/YouTubeMusicAPI/
