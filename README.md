@@ -22,6 +22,11 @@ cd YouTube-Music-API
 ```
 python -m pip install -U build setuptools
 ```
+- on Linux / macOS:
+```
+sudo apt-get install python3-venv
+```
+
 - Run the following command given below to build:
 ```
 python -m build
