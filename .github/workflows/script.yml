@@ -10,5 +10,5 @@ jobs:
         run: python -m pip install -U build setuptools
       - name: Build
         run: python -m build
-      - name: listdir
-        run: ls
+      - name: package file
+        run: ls dist
