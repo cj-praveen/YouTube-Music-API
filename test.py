@@ -1,6 +1,6 @@
 from src import YouTubeMusicAPI
 
-query: str = "alan walker faded"
+query: str = "alan walker faded remix"
 
 result = YouTubeMusicAPI.Search(query)
 
