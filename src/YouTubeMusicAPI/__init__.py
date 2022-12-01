@@ -14,24 +14,18 @@ def Search(query: str):
 
     page_source: str = urlopen(Request(f"https://music.youtube.com/search?q={quote(query)}", headers=headers)).read().decode("unicode_escape")
 
-    if id := re.search('"videoId":"(.*?)"', page_source):
-        id = loads(f"{{{id.group()}}}")["videoId"]
+    if trackId := re.search('"videoId":"(.*?)"', page_source):
+        trackId = loads(f"{{{trackId.group()}}}")["videoId"]
 
-        meta = loads(urlopen(Request(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={id}", headers=headers)).read())
+        meta = loads(urlopen(Request(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={trackId}", headers=headers)).read())
 
         return dict(
-            name = meta["title"],
-            id = id,
-            url = f"https://music.youtube.com/watch?v={id}",
-            images = [
-                f"https://i.ytimg.com/vi/{id}/hqdefault.jpg",
-                f"https://i.ytimg.com/vi/{id}/default.jpg",
-                f"https://i.ytimg.com/vi/{id}/mqdefault.jpg",
-                f"https://i.ytimg.com/vi/{id}/sddefault.jpg",
-                f"https://i.ytimg.com/vi/{id}/maxresdefault.jpg"
-            ],
-            author_name = meta["author_name"],
-            author_url = meta["author_url"]
+            trackName = meta["title"],
+            trackId = trackId,
+            trackUrl = f"https://music.youtube.com/watch?v={trackId}",
+            artworkUrl = f"https://img.youtube.com/vi/{trackId}/0.jpg"
+            artistName = meta["author_name"],
+            artistUrl = meta["author_url"]
         )
 
     else:
