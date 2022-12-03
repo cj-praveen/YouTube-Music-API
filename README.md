@@ -1,3 +1,6 @@
+# YouTubeMusicAPI
+The search API for YouTube Music.
+
 ## Installation:
 - Python 3.6 or later is required.
 - First, please make sure that the latest pip version is installed in your working environment.
@@ -44,7 +47,7 @@ git clone https://github.com/cj-praveen/YouTube-Music-API.git
 ```
 cd YouTube-Music-API
 ```
-- Install dependencies
+- Install build dependencies
 ```
 python -m pip install -U build setuptools
 ```
