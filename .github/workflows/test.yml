@@ -1,10 +1,9 @@
-name: Test Code
+name: Test
 on:
   push:
     branches:
     - 'master'
     paths:
-    - 'src/YouTubeMusicAPI/__init__.py'
     - 'test.py'
 jobs:
   build:
