@@ -2,9 +2,7 @@ from src import YouTubeMusicAPI
 
 query: str = "alan walker faded remix"
 
-result = YouTubeMusicAPI.Search(query)
-
-if result:
+if result := YouTubeMusicAPI.Search(query):
     print(result)
 else:
     print("No Result Found")
