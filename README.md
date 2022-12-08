@@ -28,12 +28,5 @@ else:
 ```
 - If a result for your search query is found, it will return an **dict object**; otherwise, it will return an  **empty dict object**. 
 ```json
-{
-    "trackName": "...",
-    "trackId": "...",
-    "trackUrl": "...",
-    "artworkUrl": "...",
-    "artistName": "...",
-    "artistUrl": "..."
-}
+{"trackName":"...","trackId":"...","trackUrl":"...","artworkUrl":"...","artistName":"...","artistUrl":"..."}
 ```
