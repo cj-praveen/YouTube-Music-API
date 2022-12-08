@@ -26,7 +26,7 @@ if result:
 else:
     print("No Result Found")
 ```
-- If a result for your search query is found while running the above program, it will return an **dict object**; otherwise, it will return **None**. 
+- If a result for your search query is found, it will return an **dict object**; otherwise, it will return an  **empty dict object**. 
 ```json
 {
     "trackName": "...",
