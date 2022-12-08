@@ -1,12 +1,13 @@
 import urllib.request
 import urllib.parse
+import requests
 import re
 import warnings
 import json
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-def Search(query: str):
+def Search(query: str) -> dict:
     """
     The search API for YouTube Music.
     """
@@ -30,4 +31,4 @@ def Search(query: str):
         )
 
     else:
-        return None
+        return {}
