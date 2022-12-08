@@ -1,9 +1,9 @@
 # YouTubeMusicAPI
-The search API for YouTube Music.
+The search API for [YouTube Music](https://music.youtube.com/).
 
 ## Installation:
 - Python 3.6 or later is required.
-- First, please make sure that the latest pip version is installed in your working environment.
+- First, please make sure that the latest **pip** version is installed in your working environment.
 ```
 python -m pip install -U pip
 ```
