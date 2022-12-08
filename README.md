@@ -13,7 +13,7 @@ python -m pip install -U YouTubeMusicAPI
 ```
 
 ## Get Started
-- Here is an example program.
+Here is an example program.
 ```py
 import YouTubeMusicAPI
 
@@ -26,7 +26,7 @@ if result:
 else:
     print("No Result Found")
 ```
-- If a result for your search query is found, it will return an **dict object**; otherwise, it will return an  **empty dict object**. 
+If a result for your search query is found, it will return an **dict object**; otherwise, it will return an **empty dict object**. 
 ```json
 {"trackName":"...","trackId":"...","trackUrl":"...","artworkUrl":"...","artistName":"...","artistUrl":"..."}
 ```
