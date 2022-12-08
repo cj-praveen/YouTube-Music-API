@@ -10,4 +10,5 @@ setuptools.setup(
     url="https://github.com/cj-praveen/YouTube-Music-API/",
     keywords = "youtube music api, YouTubeMusicAPI, python youtube music api, youtube music api python, youtube api pypi, youtube api",
     package_dir={"": "src"},
+    install_requires=["requests"]
 )
