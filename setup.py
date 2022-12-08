@@ -2,6 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="YouTubeMusicAPI",
+    author="CJ Praveen",
     version="2.7.2",
     description="The search API for YouTube Music.",
     long_description=open("README.md", "r", encoding="utf-8").read(),
