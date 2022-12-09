@@ -1,4 +1,4 @@
-# YouTubeMusicAPI
+# YouTube Music API
 The search API for [YouTube Music](https://music.youtube.com/).
 
 ## Installation:
