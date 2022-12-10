@@ -14,7 +14,7 @@ python -m pip install -U YouTubeMusicAPI
 
 ## Get Started
 Here is an example program.
-```py
+```python
 import YouTubeMusicAPI
 
 query: str = "alan walker faded"
@@ -28,5 +28,27 @@ else:
 ```
 If a result for your search query is found, it will return an **dict object**; otherwise, it will return an **empty dict object**. 
 ```json
-{"trackName":"...","trackId":"...","trackUrl":"...","artworkUrl":"...","artistName":"...","artistUrl":"..."}
+{
+    "trackName": "...",
+    "trackId": "...",
+    "trackUrl": "...",
+    "artworkUrl": "...",
+    "artistName": "...",
+    "artistUrl": "..."
+}
+```
+
+## Implementing in FastAPI
+```python
+from fastapi import FastAPI
+import uvicorn
+import YouTubeMusicAPI
+
+app = FastAPI()
+
+@app.get("/")
+def main(q: str) -> dict:
+    return YouTubeMusicAPI.Search(q)
+
+uvicorn.run(app)
 ```
