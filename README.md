@@ -38,7 +38,7 @@ If a result for your search query is found, it will return an **dict object**; o
 }
 ```
 
-## Implementing in FastAPI
+## Implementing in [FastAPI](https://pypi.org/project/fastapi/)
 ```python
 from fastapi import FastAPI
 import uvicorn
