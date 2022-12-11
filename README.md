@@ -38,7 +38,7 @@ If a result for your search query is found, it will return an **dict object**; o
 }
 ```
 
-## Implementing in FastAPI
+## Implementing with FastAPI
 Run the following command given below to install the [fastapi](https://pypi.org/project/fastapi/) and [uvicorn](https://pypi.org/project/uvicorn/).
 
 ```
