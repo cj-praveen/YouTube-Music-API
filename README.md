@@ -72,11 +72,10 @@ import YouTubeMusicAPI
 
 query: str = "ncs fearless pt2"
 
-if result := YouTubeMusicAPI.Search(query):
-    YoutubeDL({
-        "format": "bestaudio/best",
-        "quiet": True 
-    })
+result: dict = YouTubeMusicAPI.Search(query)
+
+if result:
+    YoutubeDL({ "format": "bestaudio/best" }).download([result["trackUrl"]])
 else:
     print("no result found.")
 ```
