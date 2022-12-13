@@ -1,4 +1,4 @@
-# YouTube Music API
+# YouTube Music API [unofficial]
 The search API for [YouTube Music](https://music.youtube.com/).
 
 ## Installation:
@@ -39,7 +39,7 @@ If a result for your search query is found, it will return an **dict object**; o
 ```
 
 ## Implementing with FastAPI
-Run the following command given below to install the [fastapi](https://pypi.org/project/fastapi/) and [uvicorn](https://pypi.org/project/uvicorn/).
+Run the following command given below to install the latest version of [fastapi](https://pypi.org/project/fastapi/) and [uvicorn](https://pypi.org/project/uvicorn/).
 
 ```
 pip install -U fastapi uvicorn
@@ -57,4 +57,26 @@ def main(q: str) -> dict:
     return YouTubeMusicAPI.Search(q)
 
 uvicorn.run(app)
+```
+
+## Downloading Tracks with YouTubeDL
+Run the following command given below to install the latest version of [youtubedl](https://pypi.org/project/youtube-dl/).
+
+```
+pip install -U youtube-dl
+```
+
+```python
+from youtube_dl import YoutubeDL
+import YouTubeMusicAPI
+
+query: str = "ncs fearless pt2"
+
+if result := YouTubeMusicAPI.Search(query):
+    YoutubeDL({
+        "format": "bestaudio/best",
+        "quiet": True 
+    })
+else:
+    print("no result found.")
 ```
