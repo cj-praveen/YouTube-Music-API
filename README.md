@@ -1,5 +1,5 @@
 # YouTube Music API [unofficial]
-The search API for [YouTube Music](https://music.youtube.com/)
+The search API for [YouTube Music](https://music.youtube.com/).
 
 ## Installation:
 - Python 3.6 or later is required.
