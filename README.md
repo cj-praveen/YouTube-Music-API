@@ -1,23 +1,15 @@
 # YouTube Music API [unofficial]
-The search API for [YouTube Music](https://music.youtube.com/).
-
----
+The search API for [YouTube Music](https://music.youtube.com/)
 
 ## Installation:
 - Python 3.6 or later is required.
-- First, please make sure that the latest **pip** version is installed in your working environment.
+- Run the following command given below to install the latest version of the package:
 ```
-python -m pip install -U pip
-```
-- Run the following command given below to install the package:
-```
-python -m pip install -U YouTubeMusicAPI
+python -m pip install --disable-pip-version-check --no-cache -U YouTubeMusicAPI
 ```
 
----
-
-## Get Started
-### Here is an example program.
+## Get started with examples:
+### Basic implementation
 ```python
 import YouTubeMusicAPI
 
@@ -30,25 +22,12 @@ if result:
 else:
     print("No Result Found")
 ```
-If a result for your search query is found, it will return an **dict object**; otherwise, it will return an **empty dict object**. 
-```json
-{
-    "trackName": "...",
-    "trackId": "...",
-    "trackUrl": "...",
-    "artworkUrl": "...",
-    "artistName": "...",
-    "artistUrl": "..."
-}
-```
-
----
 
 ### Implementing with FastAPI
 Run the following command given below to install the latest version of [fastapi](https://pypi.org/project/fastapi/) and [uvicorn](https://pypi.org/project/uvicorn/).
 
 ```
-pip install -U fastapi uvicorn
+python -m pip install --disable-pip-version-check --no-cache -U fastapi uvicorn
 ```
 
 ```python
@@ -65,13 +44,11 @@ def main(q: str) -> dict:
 uvicorn.run(app)
 ```
 
----
-
 ### Downloading Tracks with YouTubeDL
 Run the following command given below to install the latest version of [youtubedl](https://pypi.org/project/youtube-dl/).
 
 ```
-pip install -U youtube-dl
+python -m pip install --disable-pip-version-check --no-cache -U youtube-dl
 ```
 
 ```python
