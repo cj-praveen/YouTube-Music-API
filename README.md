@@ -5,7 +5,7 @@
 - Python 3.6 or later is required.
 - make sure the latest pip version is installed in your working environment.
 
-**If you meet the above requirements, run the following command given below to install the latest version of googlesearch.py:**
+**If you meet the above requirements, run the following command given below to install the latest version of YouTubeMusicAPI:**
 ```
 pip install --no-cache -U YouTubeMusicAPI
 ```
