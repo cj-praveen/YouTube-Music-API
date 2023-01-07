@@ -1,15 +1,18 @@
 # YouTube Music API [unofficial]
-The search API for [YouTube Music](https://music.youtube.com/).
+ The YouTube Music search scraper for the Python programming language. 
 
-## Installation:
+## Installation instruction
 - Python 3.6 or later is required.
-- Run the following command given below to install the latest version of the package:
+- make sure the latest pip version is installed in your working environment.
+
+**If you meet the above requirements, run the following command given below to install the latest version of googlesearch.py:**
 ```
-python -m pip install --disable-pip-version-check --no-cache -U YouTubeMusicAPI
+pip install --no-cache -U YouTubeMusicAPI
 ```
 
-## Get started with examples:
-### Basic implementation
+## Get started
+Here is an example program.
+
 ```python
 import YouTubeMusicAPI
 
@@ -23,44 +26,17 @@ else:
     print("No Result Found")
 ```
 
-### Implementing with FastAPI
-Run the following command given below to install the latest version of [fastapi](https://pypi.org/project/fastapi/) and [uvicorn](https://pypi.org/project/uvicorn/).
+Program output:
 
-```
-python -m pip install --disable-pip-version-check --no-cache -U fastapi uvicorn
-```
+If results are available for your search query, it will return a dict with data; otherwise, it will return an empty dict.
 
-```python
-from fastapi import FastAPI
-import uvicorn
-import YouTubeMusicAPI
-
-app = FastAPI()
-
-@app.get("/")
-def main(q: str) -> dict:
-    return YouTubeMusicAPI.Search(q)
-
-uvicorn.run(app)
-```
-
-### Downloading Tracks with YouTubeDL
-Run the following command given below to install the latest version of [youtubedl](https://pypi.org/project/youtube-dl/).
-
-```
-python -m pip install --disable-pip-version-check --no-cache -U youtube-dl
-```
-
-```python
-from youtube_dl import YoutubeDL
-import YouTubeMusicAPI
-
-query: str = "ncs fearless pt2"
-
-result: dict = YouTubeMusicAPI.Search(query)
-
-if result:
-    YoutubeDL({ "format": "bestaudio/best" }).download([result["trackUrl"]])
-else:
-    print("no result found.")
+```json
+{
+    "trackName": "...",
+    "trackId": "...",
+    "trackUrl": "...",
+    "artworkUrl": "...",
+    "artistName": "...",
+    "artistUrl": "..."
+}
 ```
