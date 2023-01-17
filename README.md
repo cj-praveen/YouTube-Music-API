@@ -1,42 +1,33 @@
-# YouTube Music API [unofficial]
- The YouTube Music search scraper for the Python programming language. 
+# YouTube Music API
+The YouTube Music search scraper for the Python programming language.
 
-## Installation instruction
-- Python 3.6 or later is required.
-- make sure the latest pip version is installed in your working environment.
-
-**If you meet the above requirements, run the following command given below to install the latest version of YouTubeMusicAPI:**
+## Installation:
+- Python 3.7 or later is required.
+- First, please make sure that the latest pip version is installed in your working environment.
 ```
-pip install --no-cache -U YouTubeMusicAPI
+pip install -U pip
+```
+- Run the following command given below to install the package:
+```
+pip install -U YouTubeMusicAPI
 ```
 
-## Get started
+## Get Started
 Here is an example program.
 
-```python
+```py
 import YouTubeMusicAPI
 
 query: str = "alan walker faded"
 
-result = YouTubeMusicAPI.Search(query)
+result = YouTubeMusicAPI.search(query)
 
 if result:
     print(result)
 else:
     print("No Result Found")
 ```
+If a result for your search query is found while running the above program, it will return an **dict object** `{"title":"...", "id": "...", "url": "...", "artwork": "...", "author": {"name": "...", "url": "..."}}` ; otherwise, it will return **None**.
 
-Program output:
-
-If results are available for your search query, it will return a dict with data; otherwise, it will return an empty dict.
-
-```json
-{
-    "trackName": "...",
-    "trackId": "...",
-    "trackUrl": "...",
-    "artworkUrl": "...",
-    "artistName": "...",
-    "artistUrl": "..."
-}
-```
+## License
+This Python package is licenced under the MIT License.

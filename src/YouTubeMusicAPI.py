@@ -1,47 +1,32 @@
-import urllib.parse
-import requests
-import re
 import warnings
-import json
+import httpx
+import re
+import typing
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-def Search(query: str) -> dict:
-    """
-    YouTubeMusicAPI
-    ~~~~~~~~~~~~~~~
-    The search API for YouTube Music.
-    ```python
-    import YouTubeMusicAPI
 
-    query: str = "alan walker faded"
+def search(query: str) -> typing.Dict[str, str] | typing.Dict:
 
-    result: dict = YouTubeMusicAPI.Search(query)
+    headers: dict = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0"}
 
-    if result:
-        print(result)
-    else:
-        print("No Result Found")
-    ```
-    """
-    
-    headers: dict = {"User-Agent" : "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36"}
+    page: str = httpx.get(f"https://music.youtube.com/search?q={query}", headers=headers,
+                          timeout=None).content.decode("unicode_escape")
 
-    page_source: str = requests.get(f"https://music.youtube.com/search?q={urllib.parse.quote(query)}", headers=headers).content.decode("unicode_escape")
+    trackId: typing.Optional[str,None] = re.search('"videoId":"(.*?)"', page)
 
-    if trackId := re.search('"videoId":"(.*?)"', page_source):
-        trackId: str = json.loads(f"{{{trackId.group()}}}")["videoId"]
-
-        meta: dict = requests.get(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={trackId}", headers=headers).json()
-
-        return dict(
-            trackName = meta["title"],
-            trackId = trackId,
-            trackUrl = f"https://music.youtube.com/watch?v={trackId}",
-            artworkUrl = f"https://img.youtube.com/vi/{trackId}/0.jpg",
-            artistName = meta["author_name"],
-            artistUrl = meta["author_url"]
-        )
-
-    else:
+    if not trackId:
         return {}
+
+    trackId: str = eval(f"{{{trackId.group()}}}")["videoId"]
+
+    track_info: dict = httpx.get(f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={trackId}",
+                                 headers=headers, timeout=None).json()
+
+    return dict(
+        title=track_info["title"],
+        id=trackId,
+        url=f"https://music.youtube.com/watch?v={trackId}",
+        artwork=f"https://img.youtube.com/vi/{trackId}/0.jpg",
+        author=dict(name=track_info["author_name"], url=track_info["author_url"])
+    )
