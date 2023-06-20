@@ -1,20 +1,29 @@
 # YouTube Music API
-The YouTube Music search scraper for the Python programming language.
+YouTube Music API is a Python package that allows you to scrape YouTube Music search results and get information such as title, id, url, artwork, and author of the songs. It is useful for creating applications that interact with YouTube Music data or for analyzing YouTube Music trends.
 
-## Installation:
-- Python 3.7 or later is required.
-- First, please make sure that the latest pip version is installed in your working environment.
+## Installation
+1) Python 3.7 or later is required.
+2) make sure that the latest pip version is installed in your working environment.
 ```
 pip install -U pip
 ```
-- Run the following command given below to install the package:
+3) Run the following command given below to install the package:
 ```
 pip install -U YouTubeMusicAPI
 ```
 
-## Get Started
-Here is an example program.
+## Usage
+To use this package, you need to import it in your Python program and call the `search` function with a query string as an argument. The function will return a dictionary object with the following keys:
+- `title`: The title of the song.
+- `id`: The id of the song on YouTube Music.
+- `url`: The url of the song on YouTube Music.
+- `artwork`: The url of the artwork image of the song.
+- `author`: A dictionary object with two keys: name and url, which represent the name and url of the author of the song.
 
+If no result is found for your query, the function will return None.
+
+## Example
+Here is an example of how to use this package to search by song name.
 ```py
 import YouTubeMusicAPI
 
@@ -27,7 +36,17 @@ if result:
 else:
     print("No Result Found")
 ```
-If a result for your search query is found while running the above program, it will return an **dict object** `{"title":"...", "id": "...", "url": "...", "artwork": "...", "author": {"name": "...", "url": "..."}}` ; otherwise, it will return **None**.
 
-## License
-This Python package is licenced under the MIT License.
+#### Output:
+```json
+{
+    "title": "Alan Walker - Faded",
+    "id": "60ItHLz5WEA",
+    "url": "https://music.youtube.com/watch?v=60ItHLz5WEA",
+    "artwork": "https://img.youtube.com/vi/60ItHLz5WEA/0.jpg",
+    "author": {
+        "name": "Alan Walker",
+        "url": "https://www.youtube.com/@Alanwalkermusic"
+    }
+}
+```
