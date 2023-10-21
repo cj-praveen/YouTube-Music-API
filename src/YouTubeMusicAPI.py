@@ -1,19 +1,17 @@
 import warnings
 import httpx
 import re
-import typing
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-
-def search(query: str) -> typing.Dict[str, str] | typing.Dict:
+def search(query: str) -> dict[str | None]:
 
     headers: dict = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0"}
 
     page: str = httpx.get(f"https://music.youtube.com/search?q={query}", headers=headers,
                           timeout=None).content.decode("unicode_escape")
 
-    trackId: typing.Optional[str,None] = re.search('"videoId":"(.*?)"', page)
+    trackId: str | None = re.search('"videoId":"(.*?)"', page)
 
     if not trackId:
         return {}

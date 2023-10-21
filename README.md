@@ -1,8 +1,8 @@
 # YouTube Music API
-YouTube Music API is a Python package that allows you to scrape YouTube Music search results and get information such as title, id, url, artwork, and author of the songs. It is useful for creating applications that interact with YouTube Music data or for analyzing YouTube Music trends.
+An unofficial YouTube Music search API
 
 ## Installation
-1) Python 3.7 or later is required.
+1) Python 3.9 or later is required.
 2) make sure that the latest pip version is installed in your working environment.
 ```
 pip install -U pip
